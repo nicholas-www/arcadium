@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Hero -->
+    <header class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 h-[50vh] md:h-[calc(100vh/2)] w-full">
+        <!-- Left Sidebar for Categories -->
+        {% include 'categories.html' %}
+
+        <!-- Large Ad Banner -->
+        <div class="md:col-span-3 col-span-3 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+            <img
+                    src="{% static 'assets/ad-banner.jpg' %}"
+                    alt="Clearance Sale Ad Banner"
+                    class="w-full h-full object-cover"
+            />
+        </div>
+    </header>
+
+    <!-- Featured products -->
+    {% include 'home/listing.html' %}
+
+    <!-- Ads -->
+    <header class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 h-[50vh] md:h-[calc(100vh/2)] w-full my-8">
+        <!-- Large Ad Banner -->
+        <div class="md:col-span-3 col-span-3 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+            <img
+                    src="{% static 'assets/spiderman-promo.jpg' %}"
+                    alt="Clearance Sale Ad Banner"
+                    class="w-full h-full object-cover"
+            />
+        </div>
+
+        <!-- Mini Ad -->
+        <div>
+            <img
+                    src="{% static 'assets/esports-world-cup.jpg' %}"
+                    alt="E-sports"
+                    class="w-full h-full object-cover cursor-pointer"
+            />
+        </div>
+
+    </header>
+
+
+{% endblock %}
